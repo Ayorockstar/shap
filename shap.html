@@ -65,49 +65,60 @@
         text-align: center;
         padding: 1rem;
       }
-      /* meadia Quenes */
-      @media (min-width: 768px) {
-        .container {
-          grid-template-areas:
-            "header header"
-            "div div"
-            "nav nav"
-            "main aside"
-            "footer footer";
-          grid-template-columns: 2fr 1fr;
+      /* Mobile */
+           sidebar{
+            display: none;
+           }
+           /* Tablet */
+           @media (min-width: 768px){
+            .dashboard{
+                grid-template-columns: 200px 1fr;
+                grid-template-areas: 
+                "header header"
+                "sidebar main"
+                "footer footer";
+            }
+            .sidebar{
+                display: block;
+                transform: translateX(0);
+
+            }
+            .main{
+                grid-template-columns: repeat(2,1fr);
+            }
+             /*Desktop.(1024px)*/
+             @media(min-width: 1024px){
+                .dashboard{
+                    grid-template-columns: 250px 1fr;
+                }
+                .main{
+                    grid-template-columns: repeat(3,1fr);
+                }
+             }
+             
         }
-      }
-      @media (min-width: 1024px) {
-        .container {
-          grid-template-areas:
-            "header header div"
-            "nav main aside"
-            "footer footer footer";
-          grid-template-columns: 1fr 2fr 1fr;
-        }
-      }
     </style>
   </head>
   <body>
     <div class="container">
       <header>
-        <img src="design.jpg" alt="" width="700" height="300">
+        <img src="design.jpg" alt="" width="1480" height="500">
       </header>
       
       <nav>
-        <img src="gn.jpg" alt="" width="700" height="300">
+        <img src="gn.jpg" alt="" width="1480" height="500">
       </nav>
       <main>
-        <img src="degn.jpg" alt="" width="700" height="300">
+        <img src="degn.jpg" alt="" width="1480" height="500">
       </main>
     <div> 
-      <img src="desktop.jpg" alt="" width="700" height="300">
+      <img src="desktop.jpg" alt="" width="1480" height="500">
       <div>
       <aside>
-        <img src="de.jpg" alt="" width="700" height="300">
+        <img src="de.jpg" alt="" width="1480" height="500">
       </aside>
       <footer>
-        <img src="des.jpg" alt="" width="700" height="300">
+        <img src="des.jpg" alt="" width="1480" height="500">
       </footer>
     </div>
   </body>
